@@ -1,14 +1,14 @@
 <section fxLayout="row wrap" fxLayoutAlign="center center">
   <mat-card fxFlex="87%" fxFlex.xs="100%" style="border: 1;">
 
-    <mat-card-title fxLayoutAlign="center center">Register a new Patient</mat-card-title>
+    <mat-card-title fxLayoutAlign="center center">Register a new Customer</mat-card-title>
 
     <form [formGroup]="registerForm" autocomplete="off" novalidate (ngSubmit)="register(registerForm.value)">
 
       <mat-card-content fxLayout="column wrap">
 
         <div flex fxLayoutGap="30px">
-          <mat-label><b>Patient Name</b></mat-label><br>
+          <mat-label><b>Customer Name</b></mat-label><br>
           <mat-form-field>
             <input matInput type="text" placeholder="FirstName" formControlName="firstName" id="firstName">
             <mat-hint align="left">Not more then 50 characters long.</mat-hint>
@@ -109,7 +109,7 @@
         </div>
         <br>
         <div flex fxLayoutGap="30px">
-          <mat-label>Medical History</mat-label>
+          <mat-label>Customer History</mat-label>
           <ng-container *ngFor="let item of disease_type; let i = index">
             <mat-checkbox (change)="onChange1($event)" [value]="item.name">{{item.name}}
             </mat-checkbox>
